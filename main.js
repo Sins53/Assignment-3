@@ -52,5 +52,37 @@ function fn4() {
   document.getElementById("A4").innerHTML
                     = r1 + "<br>" + r2 + "<br>" + r3 + "<br>" + r4 + "<br>" + r5;
 }
+function fn5() {
+  var str = document.getElementById("Q5").value;
+  var arr = str.split("")
+  var reverseArray = arr.reverse();
+  var result = reverseArray.join("");
+  document.getElementById("A5").innerHTML
+                    = "The reverse string is : " + result;
+}
+function fn6() {
+  var str = document.getElementById("Q6").value;
+  var l = str.length;
 
-
+  var i= 0;
+  var upper=0;
+  var lower=0;
+  for(i = 0 ; i < l; i++) {
+if(str[i]>='A' && str[i]<='Z'){
+  upper++;
+}
+else if(str[i]>='a' && str[i]<='z'){
+  lower++;
+}
+  }
+  document.getElementById("A6").innerHTML
+                    = "The number of lower case letters are: " + lower + "<br>" + "The number of UPPER case lettesr are: " + upper;
+}
+function fn7() {
+  var str = document.getElementById("Q7").value;
+  var arr = str.split("");
+  arr.sort();
+  result = arr.join("");
+  document.getElementById("A7").innerHTML
+                    = result;
+}
