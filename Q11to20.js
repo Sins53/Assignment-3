@@ -61,3 +61,56 @@ function fn15() {
   document.getElementById("A15").innerHTML
                     = output;
 }
+function fn16() {
+  var str1 = document.getElementById("Q16").value;
+  var str2 = document.getElementById("Q16i").value;
+  var num1 = Number(str1);
+  var num2 = Number(str2);
+  var arr = [];
+  var i = 0;
+  var j =0;
+  if (num1>num2){
+    i=num2;
+    j=num1;
+  } else { i=num1;
+  j=num2;
+  }
+  for(i;i<=j;i++){
+    if(i %2 !=0){
+      arr.push(i);
+    }
+    if(i==j){
+      break;
+    }
+  }
+  
+  
+  document.getElementById("A16").innerHTML
+                    = arr ;
+}
+function fn17() {
+  var str = document.getElementById("Q17").value;
+  var len = str.length;
+  var arr = [];
+  var i = 0;
+  for(i=len-1;i>=0;i--){
+    arr.push(str[i]);
+  }
+  var output = arr.join('');
+  
+  
+  document.getElementById("A17").innerHTML
+                    = output ;
+}
+var a = 12345;
+var str = 'sahil';
+var arr = [1,2,3];
+
+function checkType (x){
+  return typeof(x);
+}
+
+var result = checkType(a);
+console.log(result);
+
+
