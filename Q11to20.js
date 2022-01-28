@@ -113,4 +113,25 @@ function checkType (x){
 var result = checkType(a);
 console.log(result);
 
+function fn19() {
+  var str = document.getElementById("Q19").value;
+  var arr = str.split(',');
+
+  var longest = arr.sort(
+    function (a, b) {
+        return b.length - a.length;
+    }
+);
+
+  
+  document.getElementById("A19").innerHTML
+                    = longest[0];
+}
+
+function fn20() {
+  var output = arguments.callee.name
+  
+  document.getElementById("A20").innerHTML
+                    = output;
+}
 
