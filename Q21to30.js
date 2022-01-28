@@ -3,11 +3,14 @@ function fn21() {
   var arr = str.split('');
 
   document.getElementById("A21").innerHTML
-                    = arr;
+                    = "[" + arr + "]";
 }
 function fn22() {
   var str = document.getElementById("Q22").value;
+  console.log(typeof(str));
   var num = Number(str);
+  console.log(typeof(str));
+  console.log(typeof(num));
   var arr = [1,2,3,4,5,6,7,8,9,10]
 
   if(num>=0 && num<=10){
@@ -34,11 +37,44 @@ function fn231() {
 }
 function fn232() {
   var str = document.getElementById("Q23").value;
-  var x = str.split(",")
-  var c = x.join('""')
   var arr = [1,2,3,4,5]
 
   document.getElementById("A23").innerHTML
-                    = "New array length : " +  arr.unshift(c) + " Array :" + arr;
+                    = "New array length : " +  arr.unshift(str) + " Array :" + arr;
+}
+function fn24() {
+  var str = document.getElementById("Q24").value;
+  var arr = str.split("/");
+  arr.shift();
+  arr.pop();
+  var str1 = arr.join("");
+  var num = Number(str1);
+  mlist = ["Entered 0 in months place", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+  document.getElementById("A24").innerHTML
+                    = mlist[num];
+}
+function fn25() {
+  var d = new Date();
+  var a = new Date();
+  var q = a.getMonth();
+  q += 3;
+  a.setMonth(q);
+  document.getElementById("A25").innerHTML
+                    = d + "<br> ...After 3 Months...  <br>" + a;
+}
+function fn26() {
+  var str = document.getElementById("Q26").value;
+  var num = Number(str);
+  var d = new Date();
+  var output = d.getFullYear() - num;
+  document.getElementById("A26").innerHTML
+                    = "Your age is : " + output;
+}
+function fn28() {
+  var ran = Math.floor(Math.random() * 11);
+  var arr = [1,10,20,23,34,44,55,67,77,32,78];
+  document.getElementById("A28").innerHTML
+                    = arr[ran];
 }
 
+ 
