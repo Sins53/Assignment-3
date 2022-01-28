@@ -86,3 +86,64 @@ function fn7() {
   document.getElementById("A7").innerHTML
                     = result;
 }
+function fn8() {
+  var str = document.getElementById("Q8").value;
+  var check = document.getElementById("Q8i").value;
+  var arr = str.split(" ");
+  var output = "";
+  var result = arr.includes(check)
+  if(result == true){
+    output = "Present";
+  }else {
+    output = "Absent";
+  }
+  document.getElementById("A8").innerHTML
+                    = "The word (" + check + ") is " + output + " in the sentence : " + str;
+}
+function fn9() {
+  var str = document.getElementById("Q9").value;
+  var l = str.length;
+  str = str.toLowerCase();
+  var i= 0;
+  var consonants = 0;
+  var whitespaces = 0;
+  var nums = 0;
+  var vowel = 0;
+  var specialcharacters = 0;
+  for(i = 0 ; i < l; i++) {
+if(str[i] == ' ' ){
+  whitespaces++;
+}
+else if(str[i]>='a' && str[i]<='z'){
+  if(str[i] == 'a'|| str[i] =='e' || str[i] == 'i'|| str[i] =='o' ||str [i] == 'u' ){
+    vowel++;
+  }else {
+    consonants++;
+  }
+}else if (str[i] == '1'|| str[i] =='2' || str[i] == '3'|| str[i] =='4' ||str [i] == '5' || str[i] == '6'|| str[i] =='7' || str[i] == '8'|| str[i] =='9' ||str [i] == '0' ){
+  nums++;
+} else {
+    specialcharacters ++;
+  }
+  }
+  document.getElementById("A9").innerHTML
+                    = "Consonats : " + consonants + "<br> Vowels : " + vowel + "<br> White Spaces : " + whitespaces + "<br> Numbers : " + nums + "<br> Special Characters: " + specialcharacters;
+}
+function fn10() {
+  var str = document.getElementById("Q10").value;
+  var len = str.length;
+  var arr = str.split("");
+  var emparr = [];
+  var i = 0;
+  for (i = 0; i < len; i++){
+    if(i==0){
+      emparr[i]=arr[i];
+    }else if (i%2 == 0){
+      emparr[i] = arr [i];
+    }
+  }
+  var output = emparr.join("");
+
+  document.getElementById("A10").innerHTML
+                    = "Output : " + output ;
+}
