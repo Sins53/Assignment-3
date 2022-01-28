@@ -7,10 +7,7 @@ function fn21() {
 }
 function fn22() {
   var str = document.getElementById("Q22").value;
-  console.log(typeof(str));
   var num = Number(str);
-  console.log(typeof(str));
-  console.log(typeof(num));
   var arr = [1,2,3,4,5,6,7,8,9,10]
 
   if(num>=0 && num<=10){
@@ -75,6 +72,24 @@ function fn28() {
   var arr = [1,10,20,23,34,44,55,67,77,32,78];
   document.getElementById("A28").innerHTML
                     = arr[ran];
+}
+function fn30() {
+  var str1 = document.getElementById("Q30").value;
+  var str2 = document.getElementById("Q30i").value;
+  var num1 = Number(str1);
+  var num2 = Number(str2);
+  var output = num1*num2;
+  document.getElementById("A30").innerHTML
+                    = output ;
+}
+function fn30i() {
+  var str1 = document.getElementById("Q30").value;
+  var str2 = document.getElementById("Q30i").value;
+  var num1 = Number(str1);
+  var num2 = Number(str2);
+  var output = num1 / num2;
+  document.getElementById("A30").innerHTML
+                    = output ;
 }
 
  
