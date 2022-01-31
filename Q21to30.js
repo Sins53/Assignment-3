@@ -67,11 +67,45 @@ function fn26() {
   document.getElementById("A26").innerHTML
                     = "Your age is : " + output;
 }
+function fn27() {
+  var str = document.getElementById("Q27").value;
+  var chk = document.getElementById('selectid').value;
+  var num = Number(str);
+  var output = '';
+  console.log(num);
+  
+  if (chk =="Binary") {
+    output = num.toString(2);
+  }
+  else if  (chk=="Octal") {
+    output = num.toString(8);
+  }
+  else if  (chk=="Hexadecimal") {
+    output = num.toString(16);
+  } else {
+    output = "Enter a decimal value."
+  }
+
+  document.getElementById("A27").innerHTML
+                      = output;
+
+  
+}
 function fn28() {
   var ran = Math.floor(Math.random() * 11);
   var arr = [1,10,20,23,34,44,55,67,77,32,78];
   document.getElementById("A28").innerHTML
                     = arr[ran];
+}
+function fn29() {
+  var str1 = document.getElementById("Q29").value;
+  var str2 = document.getElementById("Q291").value;
+  var str3 = document.getElementById("Q292").value;
+
+  //<span class=”text-primary”>Hello World</span>
+
+  document.getElementById("A29").innerHTML
+                      = "<" + str1 + " class = '" + str2 + "' style='color: green;'> " + str3 + "<//" + str1 + ">"; 
 }
 function fn30() {
   var str1 = document.getElementById("Q30").value;
